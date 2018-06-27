@@ -1,0 +1,113 @@
+@import '../../utilities/mixins/platform';
+
+.tab-collection {
+  display: flex;
+  flex-direction: column;
+  > .tabs {
+    display: flex;
+    align-items: stretch;
+  }
+  > .tabs {
+    height: 24px;
+  }
+  > .panels {
+    flex: auto;
+  }
+  > .tabs > .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &.justified {
+    > .tabs {
+      padding: 0 0.5px;
+    }
+    > .tabs > .tab {
+      flex: auto;
+      width: 0;
+      border: 1px solid;
+      margin: 0 -0.5px;
+    }
+    > .tabs > .tab.active {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &.large {
+    > .tabs {
+      height: 32px;
+    }
+  }
+}
+
+@include family(chrome) {
+  .tab-collection {
+    &.accent {
+      > .tabs > .tab {
+        padding: 0 12px;
+        position: relative;
+        font-size: 0.9rem;
+      }
+      > .tabs > .tab > .charm::before {
+        display: inline-block;
+        vertical-align: top;
+        content: ' ';
+        height: 100%;
+        width: 0;
+      }
+      > .tabs > .tab:hover > .charm::before {
+        background-color: #ccc;
+        width: 100%;
+      }
+      > .tabs > .tab.active > .charm::before {
+        background-color: #3367D6;
+        width: 100%;
+      }
+      > .tabs > .tab > .charm {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include family(firefox) {
+  .tab-collection {
+    &.accent {
+      > .tabs > .tab {
+        padding: 0 12px;
+        position: relative;
+        font-size: 0.9rem;
+      }
+      > .tabs > .tab > .charm::before {
+        display: inline-block;
+        vertical-align: top;
+        content: ' ';
+        height: 100%;
+        width: 80%;
+        transition: width 125ms ease-out;
+      }
+      > .tabs > .tab:hover > .charm::before {
+        background-color: #ccc;
+        width: 100%;
+      }
+      > .tabs > .tab.active > .charm::before {
+        background-color: #3367D6;
+        width: 100%;
+      }
+      > .tabs > .tab > .charm {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

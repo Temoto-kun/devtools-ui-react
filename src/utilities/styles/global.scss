@@ -1,0 +1,16 @@
+@import '~normalize.css/normalize.css';
+@import '../mixins/platform';
+@import '../mixins/theme';
+
+:root {
+  font-family: sans-serif;
+  @include browser(firefox) {
+    font-size: 14px;
+  }
+  @include browser(chrome) {
+    font-size: 12px;
+    @include theme(light) {
+      color: #333;
+    }
+  }
+}

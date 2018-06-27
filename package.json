@@ -1,0 +1,60 @@
+{
+  "name": "@theoryofnekomata/devtools-ui-react",
+  "version": "0.0.0",
+  "description": "React UI suite for WebExtensions-compliant browsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temoto-kun/devtools-ui-react.git"
+  },
+  "keywords": [
+    "devtools",
+    "webextensions",
+    "suite",
+    "ui",
+    "framework"
+  ],
+  "author": "TheoryOfNekomata <allan.crisostomo@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Temoto-kun/devtools-ui-react/issues"
+  },
+  "homepage": "https://github.com/Temoto-kun/devtools-ui-react#readme",
+  "dependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.3",
+    "@storybook/addon-links": "^4.0.0-alpha.3",
+    "@storybook/addons": "^4.0.0-alpha.3",
+    "@storybook/react": "^4.0.0-alpha.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.6",
+    "css-loader": "^0.28.11",
+    "detect-browser": "^2.5.1",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0",
+    "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-autobind": "^1.0.6",
+    "react-dom": "^16.4.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "node-sass": "^4.9.0"
+  }
+}

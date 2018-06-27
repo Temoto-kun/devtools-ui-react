@@ -1,0 +1,17 @@
+@mixin browser($name) {
+  &[data-browser-name="#{$name}"] {
+    @content;
+  }
+}
+
+@mixin family($name) {
+  &[data-browser-family="#{$name}"] {
+    @content;
+  }
+}
+
+@mixin os($name) {
+  &[data-os="#{$name}"] {
+    @content;
+  }
+}

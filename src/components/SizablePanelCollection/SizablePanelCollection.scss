@@ -1,0 +1,39 @@
+.sizable-panel-collection {
+  display: flex;
+  align-items: stretch;
+  &.vertical {
+    flex-direction: column-reverse;
+  }
+  &.horizontal {
+    flex-direction: row-reverse;
+    padding: 0 0.5px;
+  }
+  &.vertical > .wrapper {
+    width: 100%;
+  }
+  &.horizontal > .wrapper {
+    height: 100%;
+  }
+  > .wrapper {
+    flex-shrink: 0;
+    position: relative;
+    border: 1px solid;
+    overflow: visible;
+  }
+  > .wrapper:first-child {
+    flex: auto;
+  }
+  > .wrapper > .resizer {
+    position: absolute;
+    width: 8px;
+    top: 0;
+    right: -4px;
+    height: 100%;
+  }
+  &.horizontal > .wrapper > .resizer {
+    cursor: ew-resize;
+  }
+  &.horizontal > .wrapper {
+    margin: 0 -0.5px;
+  }
+}
